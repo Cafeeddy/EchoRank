@@ -1,4 +1,5 @@
-import { JSONPreset } from 'lowdb';
+import { Low } from 'lowdb';
+import { JSONFile } from 'lowdb/node';
 import { nanoid } from 'nanoid';
 
 export type DatabaseSchema = {
@@ -9,12 +10,14 @@ export type DatabaseSchema = {
 };
 
 export async function getDb() {
-  const db = await JSONPreset<DatabaseSchema>('server-data.json', {
+  const adapter = new JSONFile<DatabaseSchema>('server-data.json');
+  const db = new Low(adapter, {
     contacts: [],
     newsletter: [],
     consultations: [],
     quotes: []
   });
+  await db.read();
   return db;
 }
 
