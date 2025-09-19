@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { createId, getDb } from '../lib/db';
+import { createId, getDb } from '../lib/db.js';
 
 export const router = Router();
 
