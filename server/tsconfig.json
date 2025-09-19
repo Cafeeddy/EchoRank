@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": false
+    
     "rootDir": "src",
     "strict": true,
     "outDir": "dist",
