@@ -6,7 +6,7 @@ import { router as contactRouter } from './routes/contact.js';
 import { router as newsletterRouter } from './routes/newsletter.js';
 import { router as consultationRouter } from './routes/consultation.js';
 import { router as quoteRouter } from './routes/quote.js';
-import { getConfig } from './lib/config';
+import { getConfig } from './lib/config.js';
 
 const app = express();
 const config = getConfig();
