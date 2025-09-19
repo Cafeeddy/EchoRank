@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
   if (!parse.success) return res.status(400).json({ error: 'Invalid payload', details: parse.error.flatten() });
   const { email } = parse.data;
   const db = await getDb();
-  const existing = db.data.newsletter.find(n => n.email.toLowerCase() === email.toLowerCase());
+  const existing = db.data.newsletter.find((n: any) => n.email.toLowerCase() === email.toLowerCase());
   if (existing) return res.status(200).json({ id: existing.id, createdAt: existing.createdAt, alreadySubscribed: true });
   const id = createId();
   const createdAt = new Date().toISOString();
