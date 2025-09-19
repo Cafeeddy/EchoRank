@@ -3,8 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": false
-    
+    "allowImportingTsExtensions": false,
     "rootDir": "src",
     "strict": true,
     "outDir": "dist",
@@ -15,4 +14,4 @@
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
-} 
+}
