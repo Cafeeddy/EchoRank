@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-import { router as contactRouter } from './routes/contact';
+import { router as contactRouter } from './routes/contact.js';
 import { router as newsletterRouter } from './routes/newsletter';
 import { router as consultationRouter } from './routes/consultation';
 import { router as quoteRouter } from './routes/quote';
